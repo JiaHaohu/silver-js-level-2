@@ -16,7 +16,7 @@ export default function maxMap (array, mappingFunc) {
 
   array = array.map(mappingFunc);
 
-  if (array.includes(NaN) || array.includes(undefined) || array.includes(null)) {
+  if (checkMapReult(array)) {
     return undefined;
   }
 
@@ -55,6 +55,10 @@ function isEmpty (val) {
   }
 
   return false;
+}
+
+function checkMapReult (array) {
+  return array.every(x => x === null || x === undefined || (typeof x !== 'string' && isNaN(x)));
 }
 
 // --end-->
