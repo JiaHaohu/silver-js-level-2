@@ -5,7 +5,7 @@ export default function maxMap (array, mappingFunc) {
   //
   //   Please read the test to get a basic idea.
   // <-start-
-
+  return array.map(mappingFunc).reduce((x, y) => { return Math.max(x, y); });
   // --end-->
 }
 
