@@ -17,6 +17,7 @@ export default function isLeapYear (year) {
   // ```
   // <-start-
 
+  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
   // --end-->
 }
 
