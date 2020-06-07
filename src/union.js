@@ -5,12 +5,20 @@ export default function union (...arrays) {
   //
   // Please read the test to get a basic idea.
   // <-start-
-
+  const set = new Set();
+  for (const array of arrays) {
+    addElement(set, array);
+  };
+  return Array.from(set);
   // --end-->
 }
 
 // TODO
 // You can add additional method if you want
 // <-start-
-
+function addElement (set, array) {
+  for (const element of array) {
+    set.add(element);
+  }
+}
 // --end-->
