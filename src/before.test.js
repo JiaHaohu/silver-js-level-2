@@ -5,7 +5,7 @@ describe('when calling before to create a function', () => {
     let count = 0;
     const func = before(n, () => ++count);
     for (let times = 0; times < invokeTimes; times++) {
-      func();
+      //func();
     }
     return count;
   }
